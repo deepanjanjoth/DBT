@@ -1,0 +1,24 @@
+SQL EXERCISE-3
+
+1.select sname from supplier where 
+ascii (upper(substr(1,1)))
+=ascii(sname);
+
+
+2.select upper(sname) from supplier;
+
+3.select lower(sname) from supplier;
+
+4.select lpad(sname,'25',' ') from salespeople;
+
+5.select replace(sname,'la','ro')
+ from salespeople;
+
+6.select replace(replace 
+(sname,'l','r'),'a','o';
+
+7.select sname,length(sname)
+'Length' from supplier;
+
+8.select sname from supplier where 
+soundex (sname)= soundex('BLOKE');
