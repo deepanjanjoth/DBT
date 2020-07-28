@@ -1,0 +1,60 @@
+ASS-12
+
+
+
+
+#1
+
+SELECT * FROM CUSTOMERS WHERE 
+RATING>=ANY(SELECT RATING FROM
+ 
+CUSTOMERS WHERE SNUM IN(SELECT
+ SNUM FROM SALESPEOPLE WHERE 
+
+SNUM='SERRES'));
+
+
+
+#2
+ SELECT CNAME,CITY FROM CUSTOMERS
+ WHERE CITY!=ALL(SELECT CITY FROM
+
+ SALESPEOPLE);
+
+
+#3
+SELECT *
+    FROM orders
+    WHERE 
+amt> ANY
+    ( SELECT amt
+    
+ FROM orders
+     WHERE cnum IN
+
+ ( SELECT cnum
+   FROM customers
+
+          WHERE city='london' ) );
+  
+    
+
+
+
+
+
+#4
+
+
+SELECT MIN(AMT) from orders where 
+snum in(select cnum from
+
+ customers
+where city='london');
+
+SELECT max(AMT) from orders 
+where snum in(select cnum from
+
+ customers
+where city='london');
+
