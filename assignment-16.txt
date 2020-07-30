@@ -1,0 +1,14 @@
+Assignment 16
+creating tables and indexes
+
+1.CREATE INDEX d_order
+ ON orders(odate);
+
+2.ALTER TABLE orders MODIFY
+ onum CONSTRAINT o_pk PRIMARY KEY;
+
+3.CREATE INDEX
+ I_DATE ON orders(odate);
+
+4.ALTER TABLE customers
+ MODIFY rating PRIMARY KEY;
