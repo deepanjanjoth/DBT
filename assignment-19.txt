@@ -1,0 +1,33 @@
+Assignment – 19
+Views.
+
+1.CREATE VIEW h_rated_cust AS
+SELECT *
+FROM customers
+WHERE rating=
+    (SELECT max(rating)
+     FROM customers);
+
+2.SELECT *
+FROM h_rated_cust;
+
+
+CREATE VIEW tns_city AS
+SELECT city,
+       count(city) "NO. OF SALES PEOPLE"
+FROM salespeople
+GROUP BY city;
+
+3.CREATE VIEW AV_TOT_SAL AS
+SELECT sname,
+       avg(onum) AVERAGE,
+       count(onum) "TOTAL ORDERS"
+FROM salespeople
+JOIN orders using(snum)
+GROUP BY sname;
+
+4.CREATE VIEW m_c AS
+SELECT sname,
+       cname
+FROM salespeople
+JOIN customers USING (snum);

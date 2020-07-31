@@ -1,0 +1,22 @@
+Assignment – 18
+Maintaining the Integrity of your Data.
+
+
+1.CREATE TABLE cityorders
+SELECT onum,
+       amt,
+       snum,
+       cunu,
+       city
+FROM orders
+NATURAL JOIN customers;
+
+
+ALTER TABLE cityorders ADD CONSTRAINT onum_fk
+FOREIGN key(onum) REFERENCES orders(onum);
+
+2.ALTER TABLE cityorders ADD
+FOREIGN key(cnum) REFERENCES customers(cnum);
+
+ALTER TABLE copy_orders ADD
+FOREIGN key(prev) REFERENCES copy_orders(onum);

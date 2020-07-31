@@ -1,0 +1,19 @@
+Assignment – 17
+Constraining the Values of your data.
+
+1.CREATE TABLE orders1 
+( onum number(4), cnum number(4),
+ sname number(4), odate date NOT NULL, 
+CONSTRAINT p_k_1 PRIMARY key(onum,cnum,sname) );
+
+2.CREATE TABLE salespeople1 ( comm number(3)
+ DEFAULT 10, snum number(4) PRIMARY KEY, 
+sname varchar2(10) check(substr(upper(sname)
+,1,1) BETWEEN 'A' AND 'B') );
+
+3.CREATE TABLE orders12 ( onum number(4), 
+amt number(7,2), odate date, cnum number(4),
+ snum number(4), CONSTRAINT 
+on_cn_sn check(cnum>cnum AND cnum>snum) );
+
+                                                                                                                               AND cnum>snum) );
