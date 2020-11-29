@@ -1,0 +1,15 @@
+Assignment-10
+Joining a table to itself
+
+1.SELECT m.sname, n.sname, m.city
+FROM salespeople m, salespeople
+ n
+ WHERE m.city=n.city
+  AND m.sname < n.sname;
+
+
+2.select cname,city from customers where 
+rating=
+(select rating
+ from customers
+ where cname='hoffman');

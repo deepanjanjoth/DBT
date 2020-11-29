@@ -1,0 +1,47 @@
+assignment 9
+
+1.select orders.onum,customers.cname 
+from orders ,customers where 
+
+orders.onum=customers.cname
+order by cname;
+
+2.select salespeople.sname,customers.cname,
+orders.onum from orders,customers,salespeople
+where 
+customers.snum=salespeople.sname and 
+
+orders.onum=customers.cname;
+
+
+3.SELECT cname,
+       snum,
+       comm*100 
+"RATE OF COMM."
+FROM customers 
+
+JOIN salespeople USING (snum)
+WHERE 
+comm>.12;
+SELECT cname,
+       snum,
+
+comm*100 "RATE OF COMM."
+FROM customers
+JOIN 
+salespeople USING (snum)
+WHERE comm>.12;
+
+
+4.select amt,comm from orders ,customers ,
+
+ salespeople 
+	where salespeople.snum = .snum
+ AND
+ A.snum = B.snum AND rating > 100;
+ 
+select amt,comm from orders A,customers B, 
+salespeople C
+	where A.snum = C.snum
+ AND A.snum = B.snum AND rating > 100;
+
